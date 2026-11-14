@@ -1,0 +1,69 @@
+{
+  "version": "PROG-2026.1",
+  "programs": [
+    {
+      "id": "CS",
+      "name": "计算机科学与技术",
+      "version": "2018版",
+      "effectiveEnrollYears": [2018, 2019, 2020, 2021],
+      "totalCredits": 75,
+      "retakePolicy": { "scoreRule": "max", "cap": null, "note": "重修取历次最高分" },
+      "makeupPolicy": { "cap": 60, "note": "补考通过按60分计" },
+      "required": [
+        "GE001", "GE002", "GE010",
+        "MA101", "MA102", "MA103", "MA104",
+        "EN101", "EN102",
+        "CS101", "CS102", "CS201", "CS202", "CS203", "CS204", "CS205", "CS206"
+      ],
+      "electiveGroups": [
+        {
+          "id": "CS-E1",
+          "name": "专业进阶组",
+          "minCredits": 6,
+          "courses": ["CS301", "CS302", "CS303", "CS304", "CS305"]
+        },
+        {
+          "id": "CS-E2",
+          "name": "交叉方向组",
+          "minCredits": 6,
+          "courses": ["CS302", "CS305", "CS110", "GE010"]
+        },
+        {
+          "id": "CS-E3",
+          "name": "通识拓展组",
+          "minCredits": 4,
+          "courses": ["GE002", "GE003", "GE004"]
+        }
+      ]
+    },
+    {
+      "id": "CS",
+      "name": "计算机科学与技术",
+      "version": "2022版",
+      "effectiveEnrollYears": [2022, 2023, 2024, 2025],
+      "totalCredits": 78,
+      "retakePolicy": { "scoreRule": "last", "cap": null, "note": "重修按最近一次成绩计" },
+      "makeupPolicy": { "cap": 60, "note": "补考通过按60分计" },
+      "required": [
+        "GE001", "GE010",
+        "MA101", "MA102", "MA103",
+        "EN101", "EN102",
+        "CS110", "CS102", "CS201", "CS202", "CS203", "CS204", "CS205", "CS206", "CS304"
+      ],
+      "electiveGroups": [
+        {
+          "id": "CS-E1",
+          "name": "专业进阶组",
+          "minCredits": 6,
+          "courses": ["CS301", "CS302", "CS303", "CS305"]
+        },
+        {
+          "id": "CS-E2",
+          "name": "交叉方向组",
+          "minCredits": 4,
+          "courses": ["CS302", "CS305", "CS110", "GE010"]
+        }
+      ]
+    }
+  ]
+}

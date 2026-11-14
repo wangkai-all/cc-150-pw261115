@@ -1,0 +1,10 @@
+{
+  "version": "PRQ-BAD-2026.1",
+  "prerequisites": {
+    "CS201": [{ "logic": "all", "courses": ["CS202"] }],
+    "CS202": [{ "logic": "all", "courses": ["CS303"] }],
+    "CS303": [{ "logic": "all", "courses": ["CS201"] }],
+    "CS204": [{ "logic": "all", "courses": ["GHOST101"] }],
+    "CS102": [{ "logic": "all", "courses": ["CS101"] }]
+  }
+}

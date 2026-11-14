@@ -1,0 +1,32 @@
+{
+  "version": "EQ-2026.1",
+  "equivalences": [
+    {
+      "id": "EQ-CS099-CS101",
+      "programId": "CS",
+      "programVersion": "2018版",
+      "fromCourse": "CS099",
+      "toCourse": "CS101",
+      "validEnrollYears": [2018, 2019, 2020, 2021],
+      "note": "旧大纲程序设计入门等价于程序设计基础，仅2018版学生有效"
+    },
+    {
+      "id": "EQ-CS110-CS101-2022",
+      "programId": "CS",
+      "programVersion": "2022版",
+      "fromCourse": "CS110",
+      "toCourse": "CS101",
+      "validEnrollYears": [2022, 2023, 2024, 2025],
+      "note": "2022版：Python程序设计替代程序设计基础，仅新版学生有效"
+    },
+    {
+      "id": "EQ-GE002-GE010",
+      "programId": "CS",
+      "programVersion": "2018版",
+      "fromCourse": "GE002",
+      "toCourse": "GE010",
+      "validEnrollYears": [2018, 2019, 2020, 2021],
+      "note": "人文通识可替代创新创业实践，仅2018版"
+    }
+  ]
+}

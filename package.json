@@ -1,0 +1,14 @@
+{
+  "name": "academic-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "学业检查：培养方案 / 等价关系 / 成绩导入与学分审计（零依赖）",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

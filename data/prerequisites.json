@@ -1,0 +1,20 @@
+{
+  "version": "PRQ-2026.1",
+  "prerequisites": {
+    "CS101": [{ "logic": "any", "courses": ["CS100", "CS099"] }],
+    "CS102": [{ "logic": "all", "courses": ["CS101"] }],
+    "CS201": [{ "logic": "all", "courses": ["CS101", "MA102"] }],
+    "CS202": [{ "logic": "all", "courses": ["CS201"] }],
+    "CS203": [{ "logic": "all", "courses": ["CS101"] }],
+    "CS204": [{ "logic": "all", "courses": ["CS201", "CS203"] }],
+    "CS205": [{ "logic": "all", "courses": ["CS201"] }],
+    "CS206": [{ "logic": "all", "courses": ["CS203"] }],
+    "CS301": [{ "logic": "all", "courses": ["CS205"] }],
+    "CS302": [{ "logic": "all", "courses": ["MA104", "CS201"] }],
+    "CS303": [{ "logic": "all", "courses": ["CS202"] }],
+    "CS304": [{ "logic": "all", "courses": ["CS302", "MA104"] }],
+    "CS305": [{ "logic": "all", "courses": ["CS205", "MA103"] }],
+    "MA102": [{ "logic": "all", "courses": ["MA101"] }],
+    "MA104": [{ "logic": "all", "courses": ["MA102", "MA103"] }]
+  }
+}

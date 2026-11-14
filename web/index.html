@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学业检查 · 学分审计</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>学业检查</h1>
+      <p class="subtitle">培养方案 / 课程等价 / 成绩导入 · 按入学年份适用规则 · 互斥学分审计</p>
+    </div>
+    <div class="rule-versions" id="ruleVersions" hidden></div>
+  </header>
+
+  <section class="toolbar">
+    <div class="import-group">
+      <label class="btn">
+        导入数据（JSON，可多选）
+        <input type="file" id="fileInput" accept=".json,application/json" multiple hidden />
+      </label>
+      <button class="btn ghost" id="loadSampleBtn">载入内置样本</button>
+      <button class="btn ghost" id="loadIssueBtn">载入问题先修样本</button>
+      <button class="btn ghost" id="clearBtn">清空</button>
+    </div>
+    <div class="export-group">
+      <button class="btn" id="exportJsonBtn" disabled>导出审计 JSON</button>
+      <button class="btn" id="exportCsvBtn" disabled>导出 CSV</button>
+    </div>
+  </section>
+
+  <section id="importMessages" class="messages" hidden></section>
+
+  <main id="mainArea" hidden>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>学生</h2>
+        <div class="student-filter">
+          <input type="text" id="studentSearch" placeholder="按学号/姓名筛选" />
+        </div>
+        <ul id="studentList" class="student-list"></ul>
+      </aside>
+
+      <section class="content">
+        <div id="studentHeader"></div>
+
+        <div class="cards" id="summaryCards"></div>
+
+        <section class="panel">
+          <h2>数据问题与先修检查 <span class="hint">成环 / 信息缺失优先报告</span></h2>
+          <div id="issuePanel"></div>
+        </section>
+
+        <section class="panel">
+          <h2>必修课完成情况</h2>
+          <div id="requiredTable"></div>
+        </section>
+
+        <section class="panel">
+          <h2>选修组完成情况 <span class="hint">一门课只分配给一个组（回溯互斥分配）</span></h2>
+          <div id="electivePanel"></div>
+        </section>
+
+        <section class="panel">
+          <h2>总学分与方案外课程</h2>
+          <div id="totalsPanel"></div>
+        </section>
+
+        <section class="panel trial-panel">
+          <h2>试选下一学期课程 <span class="hint">不写入正式成绩</span></h2>
+          <div class="trial-form">
+            <select id="trialCourse"></select>
+            <input type="text" id="trialTerm" placeholder="学期 如 2024-2025-1" />
+            <input type="number" id="trialScore" placeholder="分数" min="0" max="100" value="85" />
+            <button class="btn" id="addTrialBtn">加入试选</button>
+            <button class="btn ghost" id="resetTrialBtn">重置试选</button>
+          </div>
+          <div id="trialList"></div>
+          <div id="trialDelta"></div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <div id="gapModal" class="modal" hidden>
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="gapModalTitle">缺口原因</h3>
+        <button class="icon-btn" id="gapModalClose">×</button>
+      </div>
+      <div id="gapModalBody"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
